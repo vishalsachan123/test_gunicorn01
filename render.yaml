@@ -4,5 +4,5 @@ services:
     env: python
     plan: free
     region: oregon
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn -k gevent -w 4 -b 0.0.0.0:$PORT with_gevent:app"
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn -k gevent -w 4 -b 0.0.0.0:$PORT with_gevent:app
